@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --theme-color: #ff8a47;
+  }
+
+body, button, input {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+.user-icon {
+    width: 100px;
+}
+
+a {
+    text-decoration: none !important;
+    color: #000;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* header */
+/* base.html styling start*/
+
+header {
+    height: 90px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-name {
+    font-size: 26px;
+    border-right: 2px solid #ff8a47;;
+    padding-right: 20px;
+    color: #ff8a47;
+}
+
+.logo-name:hover{
+    color: #ff8a47;
+}
+
+.nav-bar{
+    margin-right: auto;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    list-style: none;
+    margin-left: 10px;
+    margin-top: 15px;
+    color: #fff;
+}
+
+.nav-links li a{
+    display: block;
+    padding: 10px;
+    color: #000;
+}
+
+.nav-links li a:hover{
+    color: var(--theme-color);
+    border-bottom: 1px solid #ff8a47;
+}
+
+
+.login-btn {
+    display: block;
+    padding: 10px 30px;
+    background: var(--theme-color);
+    /* background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%); */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+
+.burger {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.burger-line-1,
+.burger-line-2,
+.burger-line-3 {
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    margin: 7px 0;
+    border-radius: 10px;
+}
+
+.big-circle {
+	position: absolute;
+	top: -100px;
+	left: 120px;
+	z-index: -1;
+	opacity: 0.5;
+	height: 500px;
+	width: 500px;
+	border-radius: 50%;
+	background-color: var(--theme-color);
+}
+.medium-circle {
+	position: absolute;
+	top: 25%;
+	left: 37%;
+	z-index: -1;
+	height: 450px;
+	width: 450px;
+	opacity: 0.4;
+	border-radius: 50%;
+	background-color: var(--theme-color);
+}
+.small-circle {
+	position: absolute;
+	bottom: 2%;
+	right: 5.5%;
+	z-index: -1;
+	height: 400px;
+	width: 400px;
+	border-radius: 50%;
+	background-color: var(--theme-color);
+	opacity: 0.3;
+}
+
+
+.donation-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+
+.search-form {
+    display: flex;
+}
+
+.search-area {
+    height: 40px; 
+    margin-right: 5px;
+}
+
+.search-button {
+    height: 40px;
+    width: 80px;
+}
+
+.charity-container {
+    width: 55%;
+}
+.charity-box {
+    margin: 20px auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 300px;
+}
+
+.charity-donate{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+    margin: 6px auto 10px auto;
+    background: var(--theme-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    letter-spacing: 2px;;
+}
+
+.room_image {
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+
+.donate-txt {
+    background-color: var(--theme-color);
+    padding: 15px;
+    display: inline;
+}
+
+select,
+#charity-name,
+#donation-amount {
+    padding: 5px;
+    margin-top: 30px;
+}
+
+
+.banner{
+    height: 400px;
+}
+
+.banner h1 {
+    font-size: 60px;
+    border-left: 5px solid #000;
+    padding-left: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.banner p {
+    font-size: 24px;
+    margin: 40px 0;
+    z-index: 1;
+    position: relative;
+}
+
+.banner-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.banner img{
+    height: 100%;
+}
+
+
+.banner .donate-btn{
+    background: var(--theme-color);
+    padding: 10px 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.banner .events-btn{
+    padding: 10px 30px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* base.html styling end*/
+
+.vision,
+.mission {
+    height: 500px;
+}
+
+.vision img, 
+.mission img {
+    width: 40%;
+    height: 60%;
+    border-radius: 5px;
+}
+
+.vision-intro, 
+.mission-intro {
+    width: 40%;
+    line-height: 50px;
+    text-align: center;
+}
+
+.vision-intro h1,
+.mission-intro h1{
+    font-size: 50px;
+    background-color: var(--theme-color);
+    padding: 20px 0;
+}
+
+.vision-container,
+.mission-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.donate{
+    height: 150px;
+}
+
+.donate h1{
+    border-bottom: 1px solid black;
+    padding: 20px;;
+}
+
+.donate-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.donate a {
+    display: block;
+    padding: 10px 30px;
+    background: var(--theme-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+
+}
+
+.profile{
+    height: 400px;
+}
+
+.profile-display{
+    width: 40%;
+    margin: 20px auto 0;
+    text-align: center;
+    line-height: 40px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+/* footer section */
+footer {
+    width: 100%;
+    height: 300px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    position: relative;
+}
+
+.social {
+    display: flex;
+}
+
+.social img{
+    margin-left: 10px;
+}
+
+.top-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+    border-bottom: 1px solid gray;
+}
+
+.top-footer h5 {
+    font-size: 20px;
+}
+
+.bottom-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-footer h6 {
+    font-size: 15px;
+    font-weight: 100;
+    color: gray;
+}
+
+.bottom-footer li {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.bottom-footer li a:hover {
+    border-bottom: 1px solid #ff8a47;
+}
+
+
+.reservation_form {
+    width: 30%;
+    height: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.errorlist {
+    color: red;
+    list-style-type: none;
+}
+@media (max-width: 768px) {
+    header {
+        height: auto;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    header .logo-name {
+        font-size: 40px;
+        padding: 20px 10px;
+        justify-self: center;
+        align-self: center;
+        border-right: none;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .nav-links li a{
+        padding: 15px 0;
+    }
+
+    .nav-bar{
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .nav-bar.active {
+        height: 246.67px;
+        transition: all 1000ms ease;
+    }
+
+    header .login-btn {
+        display: none;
+        margin: 0 auto 10px auto;
+        text-align: center;
+        width: 50%;
+        padding: 15px 0;
+    }
+
+    .login-btn.active {
+        display: block;
+    }
+
+    .burger {
+        display: block;
+    }
+    .burger-line-1.toggle {
+        transform: rotate(45deg) translate(7px, 9px);
+        transition: all 400ms ease-in-out;
+    }
+
+    .burger-line-2.toggle {
+        opacity: 0;
+        transition: all 200ms ease;
+    }
+
+    .burger-line-3.toggle {
+        transform: rotate(-45deg) translate(7px, -9px);
+        transition: all 400ms ease-in-out;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .banner-container {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .banner h1 {
+        display: none;
+    }
+
+    .banner img {
+        height: 50%;
+    }
+
+    .banner .donate-btn{
+        margin-left: 40px;
+    }
+
+    .vision-container,
+    .mission-container {
+        flex-direction: column;
+    }
+
+    .vision-intro,
+    .mission-intro {
+        width: 100%;
+    }
+    .vision img,
+    .mission img {
+        width: 100%;
+        height: 40%;
+        filter: none;
+    }
+
+    .donate-container {
+        flex-direction: column;
+    }
+
+    footer {
+        height: auto;
+    }
+    .bottom-footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .our-company{
+        width: 33%;
+    }
+    .help, .contact, .others {
+        margin: 20px 0;
+        width: 33%;
+    }
+
+    .search-form {
+        justify-content: space-evenly;
+    }
+
+    .search-area {
+        margin-right: 0;
+    }
+
+    .charity-container {
+        width: 100%;
+    }
+
+    .profile-display {
+        width: 95%;
+    }
+}
