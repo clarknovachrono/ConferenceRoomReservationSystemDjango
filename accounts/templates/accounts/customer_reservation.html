@@ -1,0 +1,42 @@
+{%  extends 'accounts/base.html' %}
+
+{% block content %}
+
+
+<br>
+
+	<div class="col-md-7">
+		<br>
+		<hr>
+		<div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+					<th>ID</th>
+					<th>Date Reserved</th>
+					<th>Room</th>
+					<th>Date</th>
+					<th>Timeslot</th>
+
+				</tr>
+
+				{% for my_reservation in customer_reservation %}
+					<tr>
+						<td>{{my_reservation.id}}</td>
+						<td>{{my_reservation.date_created}}</td>
+						<td>{{my_reservation.room}}</td>
+						<td>{{my_reservation.date}}</td>
+						<td>{{my_reservation.time_slot}}</td>
+						<td><a href="{% url 'update_reservation' my_reservation.id %}" class="btn btn-sm btn-info">Edit</a></td>
+						<td><a href="{% url 'delete_reservation' my_reservation.id %}" class="btn btn-sm btn-danger">Cancel</a></td>
+
+					</tr>
+				{% endfor %}
+
+
+			</table>
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}

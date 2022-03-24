@@ -1,0 +1,40 @@
+{%  extends 'accounts/base.html' %}
+
+{% block content %}
+<style>
+	body{
+		overflow-x: hidden;
+	}
+</style>
+		<br>
+
+		<div class="row">
+			<div class="col-md">
+				<div class="card card-body">
+					<h5 style="font-weight: bold; color: #ff8a47;" >Rooms</h5>
+				</div>
+				<div class="card card-body">
+					<table class="table">
+						<tr>
+							<th style="color: #ff8a47;">Name</th>
+							<th style="color: #ff8a47;">Description</th>
+							<th style="color: #ff8a47;">Price</th>
+							<th style="color: #ff8a47;">Preview</th>
+						</tr>
+
+						{% for i in rooms %}
+							<tr>
+								<td>{{i.name}}</td>
+								<td style="max-width: 500px;">{{i.description}}</td>
+								<td>Php {{i.price}}</td>
+								<td><img src="{{ i.image_url }}" class="room_image"></td>
+							</tr>
+						{% endfor %}
+						
+					</table>
+				</div>
+			</div>
+			
+		</div>
+
+{% endblock content %}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% extends 'accounts/base.html'%}
+{% block content %}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      padding: 10px 0;
+      background: #ff8a47;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border: none;
+      border-radius: 20px;
+      font-size: 18px;
+      cursor: pointer;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+
+img{
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  display: block;
+  margin: 10px auto;
+}
+
+</style>
+</head>
+<body>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/237069564_3838319252938981_8925375671193592912_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=174925&_nc_eui2=AeEJO1U4dR0ccd0ZtkwiqaYkEd0JEJ-fHMcR3QkQn58cx7y9X1pOmTZoUye-waLaCFMgVVMCzaD5OLgAlksQZjxz&_nc_ohc=esR0PYjfjn8AX8diRq2&_nc_ht=scontent.fmnl13-2.fna&oh=00_AT8-i2OqZY5W93G07WV-hHqhu4oylFA8hbL2572kXKY7TA&oe=623F5C18" alt="Vince">
+      <div class="container">
+        <h2>Vince Clark Tañola</h2>
+        <p class="title">CEO & Founder | Backend developer</p>
+        <p>An aspiring student of Cebu Institute of Technology - University determined to complete every task assigned to me.</p>
+        <p>vinceclarkt@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://scontent.fceb2-2.fna.fbcdn.net/v/t39.30808-6/245359039_947447712649827_7543008366975276853_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=174925&_nc_eui2=AeEVqIi4I5s1G5J--WLNyEhtMptHSvKAP68ym0dK8oA_ryVerKWfu7cnJ0ZkvXEkgS4A5lsH9pkRpDpG4p0kQo00&_nc_ohc=or7cxpDYoHEAX-NZQMd&_nc_ht=scontent.fceb2-2.fna&oh=00_AT9aw7KHCK5bYwAY-6rYX2K0-4JaGotvdSgeAx5jEDowvQ&oe=623F6B98" alt="Jasmine">
+      <div class="container">
+        <h2>Jasmine Lisondra</h2>
+        <p class="title">Documentation | Designer | Frontend developer</p>
+        <p>A student of Cebu Institute of Technology - University and soon to become a frontend developer/designer.</p>
+        <p>jasminelisondra@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.6435-9/81101567_2848419865210031_8705996848994713600_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_eui2=AeEtHDGy2IdFEDvfr2t9IuVSWWVt57VGBKNZZW3ntUYEo8mOX9BCqrlmp_7Fkm9pRYfv9B4FfCbmojeagamz7Wzh&_nc_ohc=B8ordYsQOJEAX9zeXCx&_nc_ht=scontent.fceb2-1.fna&oh=00_AT-KG8EoVh9WyWsAIrV_59VLTO0r_uHDNcn9fTUwt2WlBw&oe=6260E1B8" alt="Rollan">
+      <div class="container">
+        <h2>Joshua Rollan</h2>
+        <p class="title">Designer | Frontend developer</p>
+        <p>A student of Cebu Institute of Technology - University and soon to become a UI/UX designer.</p>
+        <p>joshuarollan@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+{% endblock content %}

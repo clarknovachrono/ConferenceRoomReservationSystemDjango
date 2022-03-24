@@ -1,0 +1,117 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+{% block content %}
+{% if request.user.is_authenticated %}
+    <div class="container">
+         Hello, <h6 style="color: #ff8a47; display: inline;">{{ request.user }} | {{ request.user.customer.first_name }} {{ request.user.customer.last_name}}</h6>
+    </div>
+{% endif %}
+
+    <section class="banner">
+        <div class="container banner-container">
+            <div class="banner-left-side">
+                <h1><span style="color: #ff8a47;">V</span>R<span style="color: #ff8a47;">J</span> <span style="color: #ff8a47;">R</span>eservation</h1>
+                <p>"For hassle free <span style="color: #ff8a47;">reservations</span>"</p>
+                <a href="{% url 'reservation' %}" class="donate-btn">Reserve</a>
+                <a href="#" class="events-btn">Events</a>
+            </div>
+            <img src="{% static 'images/undraw_chilling_re_4iq9.svg' %}" alt="">
+
+        </div>
+        <div class="color-overlay"></div>
+    </section>
+
+    <section class="mission">
+        <div class="container mission-container">
+            <div class="mission-intro">
+                <h1>Our mission</h1>
+                <p>To provide genuine heartfelt hospitality, that will engrave
+                    a unique experience in the heart and mind of every guest.</p>
+            </div>
+            <img src="{% static 'images/mission_img.jpg' %}" alt="">
+        </div>
+    </section>
+
+    <section class="vision">
+        <div class="container vision-container">
+            <img src="{% static 'images/vision_img.jpg' %}" alt="">
+            <div class="vision-intro">
+                <h1>Our vision</h1>
+                <p>To be the guests’ first choice, by aiming to create
+                    everlasting memories through an unmatched personalised service.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="donate">
+        <div class="container donate-container">
+            <h1>For hassle free <span style="color: #ff8a47;">reservations</span></h1>
+            <a href="">Reserve now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-container">
+          <div class="top-footer">
+            <h5><span style="color: #ff8a47;">VRJ</span> Reservation</h5>
+            <div class="social">
+              <img src="{% static 'images/icon-facebook.svg' %}" alt="">
+              <img src="{% static 'images/icon-twitter.svg' %}" alt="">
+              <img src="{% static 'images/icon-pinterest.svg' %}" alt="">
+              <img src="{% static 'images/icon-instagram.svg' %}" alt="">
+            </div>
+          </div>
+          
+          <div class="bottom-footer">
+            <div class="our-company">
+              <h6>OUR COMPANY</h6>
+              <nav>
+                <ul>
+                  <li><a href="#">HOW WE WORK</a></li>
+                  <li><a href="#">VIEW PLANS</a></li>
+                  <li><a href="#">REVIEWS</a></li>
+                </ul>
+              </nav>
+            </div>
+              <div class="help">
+                <h6>HELP ME</h6>
+                <nav>
+                  <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">TERM OF USE</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">COOKIES</a></li>
+                  </ul>
+                </nav>
+              </div>
+  
+              <div class="contact">
+                <h6>CONTACT</h6>
+                <nav>
+                  <ul>
+                    <li><a href="#">SUPPORT</a></li>
+                    <li><a href="#">LIVE CHAT</a></li>
+                  </ul>
+                </nav>
+              </div>
+  
+              <div class="others">
+                <h6>OTHERS</h6>
+                <nav>
+                  <ul>
+                    <li><a href="#">CAREERS</a></li>
+                    <li><a href="#">PRESS</a></li>
+                    <li><a href="#">LICENSES</a></li>
+                  </ul>
+                </nav>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+  
+      </footer>
+{% endblock content %}

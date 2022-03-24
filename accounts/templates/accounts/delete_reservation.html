@@ -1,0 +1,24 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<br>
+<div class="row">
+	<div class="col-md-6">
+		<div class="card card-body">
+            <p>
+                Delete reservaton with the ID of "{{ item }}"?
+            </p>
+
+            <form action="{% url 'delete_reservation' item.id %}" method="POST">
+                {% csrf_token %}
+                <input type="submit" name="Confirm" class="btn btn-danger">
+                <a href="{% url 'home' %}" class="btn btn-warning">Cancel</a>
+
+            </form>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

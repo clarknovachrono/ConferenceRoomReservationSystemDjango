@@ -1,0 +1,15 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+{% block content %}
+
+<form action="" method="POST" class="reservation_form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" name="Submit" class="btn btn-primary" style="margin-top: 25px; width: 40%">
+    {% for message in messages %}
+    <br>
+    <p style="color: #ff8a47; margin-top: 10px;">{{message}}</p>
+{% endfor %}
+</form>
+
+{% endblock %}
