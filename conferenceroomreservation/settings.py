@@ -23,8 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8v&fycm#mx@_st-_!^%=d!l!##a6*2-prov_=o!z+h%no2(z4j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -78,38 +78,38 @@ WSGI_APPLICATION = 'conferenceroomreservation.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if (DEBUG is True):
-    DATABASES = {
-        'default': {
-            # 'ENGINE': 'django.db.backends.sqlite3',
-            # 'NAME': BASE_DIR / 'db.sqlite3',
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'conferenceroom_db',
-            'USER': 'root',
-            'PASSWORD': '',
-            'HOST': 'localhost',
-            'PORT': '3306',
-            'OPTIONS': {
-                    'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-                },
-        }
-    }
+# if (DEBUG is True):
+#     DATABASES = {
+#         'default': {
+#             # 'ENGINE': 'django.db.backends.sqlite3',
+#             # 'NAME': BASE_DIR / 'db.sqlite3',
+#             'ENGINE': 'django.db.backends.mysql',
+#             'NAME': 'conferenceroom_db',
+#             'USER': 'root',
+#             'PASSWORD': '',
+#             'HOST': 'localhost',
+#             'PORT': '3306',
+#             'OPTIONS': {
+#                     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#                 },
+#         }
+#     }
 
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'conferenceroom_db',
-            'USER': 'conferenceadmin@conferenceroomdb',
-            'PASSWORD': 'Elite0ne1-',
-            'HOST': 'conferenceroomdb.mysql.database.azure.com',
-            'PORT': '3306',
-            'OPTIONS': {
-                'ssl': {'ca': 'staticfiles/ssl/BaltimoreCyberTrustRoot.crt.pem'},
-                'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-            }
+# else:
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'conferenceroom_db',
+        'USER': 'conferenceadmin@conferenceroomdb',
+        'PASSWORD': 'Elite0ne1-',
+        'HOST': 'conferenceroomdb.mysql.database.azure.com',
+        'PORT': '3306',
+        'OPTIONS': {
+            'ssl': {'ca': 'staticfiles/ssl/BaltimoreCyberTrustRoot.crt.pem'},
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }
     }
+}
 
 
 # Password validation
